@@ -1,0 +1,20 @@
+name: landing-page-audit
+description: Inspeção arquitetônica da taxa de conversão da Landing Page enviada, corrigindo UX/Promessa seguido pela confecção da nova Copy da página.
+
+steps:
+  - id: step_audit
+    agent: pti-funnel-architect
+    task: audit-landing-page
+    description: "Avalia a URL/Imagem da LP para otimizações lógicas em UX, posicionamento das CTAs e escaneabilidade da promessa principal."
+
+  - id: step_refine_lp_copy
+    agent: pti-conversion-copywriter
+    task: generate-ad-copy-variations
+    depends_on: [step_audit]
+    description: "Assume o comando baseado na auditoria estrutural para gerar exatamente as H1s, os Bullet Points novos e Promessa remodelada."
+
+  - id: step_finalize_lp
+    agent: pti-campaign-commander
+    task: create-campaign-strategy
+    depends_on: [step_refine_lp_copy]
+    description: "Conclui o fluxo avisando se após essas mudanças devemos rodar tráfego frio em cima da URL remodelada, e encerra o pipeline."

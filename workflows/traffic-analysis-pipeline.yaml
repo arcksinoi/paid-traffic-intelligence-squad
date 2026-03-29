@@ -1,0 +1,26 @@
+name: traffic-analysis-pipeline
+description: Pipeline End-to-End de análise de Dashboard de tráfego, passando pela criação de criativos/copy e plano de ação financeira.
+
+steps:
+  - id: step_metrics
+    agent: pti-metrics-analyst
+    task: analyze-dashboard-image
+    description: "Lê a imagem fornecida, diagnostica KPIs e gera relatórios."
+
+  - id: step_creatives
+    agent: pti-creative-strategist
+    task: suggest-creative-angles
+    depends_on: [step_metrics]
+    description: "Pega a base das métricas defasadas e propõe 3 novos modelos visuais/roteiros em vídeo para consertar o CTR."
+
+  - id: step_copy
+    agent: pti-conversion-copywriter
+    task: generate-ad-copy-variations
+    depends_on: [step_metrics]
+    description: "Cria 3 headlines/ad-bodies altamente sedutores corrigindo buracos identificados na dor do leitor."
+
+  - id: step_orchestration
+    agent: pti-campaign-commander
+    task: create-campaign-strategy
+    depends_on: [step_creatives, step_copy]
+    description: "Aprova, aloca orçamentos, finaliza a execução e emite a planilha estrutural sugerida de CBO/ABO."

@@ -1,0 +1,55 @@
+name: paid-traffic-intelligence
+version: 1.0.0
+description: |
+  Squad especializado em inteligência de tráfego pago, focado em analisar dashboards de métricas via imagem, auditar funis de conversão (landing pages) e propor melhorias em copywriting e criativos para escalar ROAS.
+author: "AIOS"
+license: MIT
+slashPrefix: pti
+
+aios:
+  minVersion: 2.1.0
+  type: squad
+
+components:
+  agents:
+    - pti-metrics-analyst.md
+    - pti-conversion-copywriter.md
+    - pti-creative-strategist.md
+    - pti-funnel-architect.md
+    - pti-campaign-commander.md
+  
+  tasks:
+    - analyze-dashboard-image.md
+    - audit-landing-page.md
+    - generate-ad-copy-variations.md
+    - suggest-creative-angles.md
+    - create-campaign-strategy.md
+
+  workflows:
+    - traffic-analysis-pipeline.yaml
+    - landing-page-audit.yaml
+
+dependencies:
+  system: []
+  squads: []
+  mcp-tools: []
+  skills: []
+
+triggers:
+  enabled: true
+  display: inline
+  events:
+    squad: true
+    agent: true
+    task: true
+  flow:
+    enabled: true
+    live: true
+
+tags:
+  - paid-traffic
+  - marketing
+  - copywriting
+  - media-buying
+  - conversion-rate-optimization
+  - metrics-analysis
