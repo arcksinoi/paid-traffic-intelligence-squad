@@ -15,13 +15,13 @@ O squad usa 5 agentes hiper-especializados, treinados para trabalhar em cadeia:
 
 ## 🚀 Como Instalar
 
-Instale globalmente usando o instalador de squads ou skills:
+Instale diretamente do repositório no GitHub usando o instalador de squads ou skills:
 ```bash
-npx squads add path/to/paid-traffic-intelligence
+npx squads add arcksinoi/paid-traffic-intelligence-squad
 ```
-ou, se usá-lo como skill no Claude/Cursor:
+ou, se preferir instalá-lo nativamente como skill:
 ```bash
-npx skills add path/to/paid-traffic-intelligence
+npx skills add arcksinoi/paid-traffic-intelligence-squad
 ```
 
 ## 💻 Como Usar (Comandos Rápidos)
